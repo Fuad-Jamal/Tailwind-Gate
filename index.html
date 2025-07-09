@@ -4,8 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
 </head>
 <body>
-    
+    <div>
+        <div class="bg-blue-200 flex gap-4 md:gap-6 pl-20 pt-6 pb-4">
+            <img class="w-6 h-6" src="4df3bed4-b4fd-42c6-b3a6-542906255ac8.svg">
+            <span class="border-l border-blue-400"></span>
+            <img class="w-6 h-6" src="8bb9137c-dbdb-42b3-a522-38b0b659ec69.svg">
+            <span class="border-l border-blue-400"></span>
+            <img class="w-6 h-6" src="40a714f6-feb1-471c-82c4-0ec51af1a3a7.svg">
+            <span class="border-l border-blue-400"></span>
+            <img class="w-6 h-6" src="4ae03d71-a41c-4869-9264-688db6ba1cd7.svg">
+            <span class="border-l border-blue-400"></span>
+            <img class="w-6 h-6" src="4f40f59f-57c5-457c-9bbc-64513c8a6dc0.svg">
+            <p class="mt-18 -ml-[300px] md:-ml-[0px] md:mt-0 md:ml-[600px]">Online Services</p>
+            <span class="md:border-l md:border-blue-400"></span>
+        <p class="mt-18 -ml-[25px] md:-ml-[0px] md:mt-0">Publications</p>
+        </div>
+        <div class="mt-8">
+            <div class="flex flex-col">
+                <img class="hidden md:block h-40 w-40 ml-2 ml-14" src="rssb-cut-logo.png">
+                <p class="ml-58 -mt-[100px]">Our <span class="text-blue-900 font-semibold">Health</span></p>
+                <p class="ml-58">Our <span class="text-blue-900 font-semibold">Future</span></p>
+            </div>
+                <div class="flex ml-[900px] gap-8 mt-[-110px]">
+            <img class="h-8 w-8" src="f6aaec56-2cd0-4310-87e3-e850c9934904.svg">
+            <p class="text-blue-800 font-bold">4044</p>
+            <p class="mt-[30px] ml-[-90px] text-[15px]">Toll free lines</p>
+            <span class="border-l border-blue-400"></span>
+            <img class="h-8 w-8" src="981a7941-ca78-4bf4-a41f-193884e739bd.svg">
+            <p class="text-blue-800 font-bold">info@rssb.rw</p>
+            <p class="mt-[30px] ml-[-90px] text-[15px]">Reach to us</p>
+                </div>
+        </div>
+        <!-- Hamburger -->
+<div class="md:hidden flex justify-end px-6 pt-4">
+    <div class="flex flex-col">
+                    <img src="rssb-cut-logo.png" class="h-[100px] w-[100px] mr-[230px]">
+                <p class="ml-28 -mt-[90px]">Our <span class="text-blue-900 font-semibold">Health</span></p>
+                <p class="ml-28">Our <span class="text-blue-900 font-semibold">Future</span></p>
+            </div>
+    <button id="menu-btn" class="text-blue-900 focus:outline-none">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+    </button>
+</div>
+        <div id="mobile-menu" class="md:hidden bg-blue-900 text-white rounded-lg mx-4 mt-2 py-4 px-6 hidden">
+    <ul class="flex flex-col gap-4">
+        <li>HOME</li>
+        <li>SCHEMES</li>
+        <li>INVESTMENT</li>
+        <li>MANAGEMENT</li>
+        <li>ABOUT</li>
+        <li>CAREERS</li>
+        <li>NEWS & EVENTS</li>
+    </ul>
+</div>
+        <nav class="hidden md:block bg-blue-900 mt-40 py-10 mx-16 rounded-lg sticky top-0 z-50">
+            <ul class="flex text-white gap-4 ml-6">
+                <li>HOME</li>
+                <li>SCHEMES</li>
+                <li>INVESTMENT</li>
+                <li>MANAGEMENT</li>
+                <li>ABOUT</li>
+                <li>CAREERS</li>
+                <li>NEWS & EVENTS</li>
+            </ul>
+        </nav>
+        <div class="bg-blue-100">
+            <div class="flex">
+                <p class="md:mt-22 md:ml-10 md:mt-40 md:text-2xl md:font-sans"><span class="text-yellow-500 font-bold">Member First</span> , data-driven, evidence-based and high performing organization.</p>
+                <img src="public.png" class="md:w-[800px]">
+            </div>
+            </div>
+
+
+
+        <script>
+    const btn = document.getElementById('menu-btn');
+    const menu = document.getElementById('mobile-menu');
+    btn.addEventListener('click', () => {
+        menu.classList.toggle('hidden');
+    });
+</script>
+    </div>
 </body>
 </html>
