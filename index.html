@@ -62,7 +62,8 @@
         <li>NEWS & EVENTS</li>
     </ul>
 </div>
-        <nav class="hidden md:block bg-blue-900 mt-40 py-10 mx-16 absolute rounded-lg sticky top-0 z-50">
+
+        <nav id="mainMenu" class="hidden md:block bg-blue-900 mt-40 py-10 mx-16 rounded-lg sticky top-0 z-50">
             <ul class="flex text-white gap-4 ml-6">
                 <li>HOME</li>
                 <li>SCHEMES</li>
@@ -104,12 +105,12 @@ all Rwandans.</span></p></div>
                           <!-- SOCIALS -->
 
     <div class="grid grid-cols-1 grid-cols-1 md:grid-cols-3 gap-4 mt-12 ml-10">
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(public.png)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_14.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2">PENSION SCHEME</h2><p>Retire With Dignity</p></div>
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(fi.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_17.svg" class="h-20 ml-14"><h2 class="font-bold text-blue-900 mt-2">OCCUPATIONAL HAZARDS</h2><p>We Are Here For You</p></div>
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(d0.avif)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_20.svg" class="h-20"><h2 class="font-bold text-blue-900 mt-2">MEDICAL SCHEME</h2><p>Our Health, Our Future</p></div>
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(kod.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_23.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2">CBHI SCHEME</h2><p>Giving You Happiness At Best Rate</p></div>
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(kss.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_26.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2">EJOHEZA</h2><p>Start Early And Reap The Rewards</p></div>
-        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(mat.avif)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_29.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2">MATERNITY LEAVE</h2><p>Enjoy Your Maternity Leave With Full Salary</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(public.png)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_14.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">PENSION SCHEME</h2><p class="hover:text-white">Retire With Dignity</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(fi.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_17.svg" class="h-20 ml-14"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">OCCUPATIONAL HAZARDS</h2><p class="hover:text-white">We Are Here For You</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(d0.avif)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_20.svg" class="h-20"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">MEDICAL SCHEME</h2><p class="hover:text-white">Our Health, Our Future</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(kod.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_23.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">CBHI SCHEME</h2><p class="hover:text-white">Giving You Happiness At Best Rate</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(kss.webp)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_26.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">EJOHEZA</h2><p class="hover:text-white">Start Early And Reap The Rewards</p></div>
+        <div class="border px-16 py-18 rounded-md border-gray-200 hover:bg-[#242f8fb1] hover:bg-[url(mat.avif)]  hover:bg-cover hover:bg-center hover:bg-blend-multiply"><img src="image_29.svg" class="h-20 ml-6"><h2 class="font-bold text-blue-900 mt-2 hover:text-yellow-500">MATERNITY LEAVE</h2><p class="hover:text-white">Enjoy Your Maternity Leave With Full Salary</p></div>
     </div>
     
     <!-- NEVER MISS  -->
@@ -188,10 +189,29 @@ all Rwandans.</span></p></div>
 </div>
 
         <script>
+const menu = document.getElementById("manMenu");
+
+  function handleScroll() {
+    const isLargeScreen = window.matchMedia('(min-width: 1024px)').matches;
+
+    if (isLargeScreen) {
+      if (window.scrollY > 100) {
+        menu.classList.remove("md:absolute", "md:mt-[7rem]", "md:mx-32", "md:rounded-md");
+        menu.classList.add("md:fixed", "md:top-0", "md:left-0", "md:right-0", "md:px-10", "md:shadow-md");
+      } else {
+        menu.classList.add("md:absolute", "md:mt-[7rem]", "md:mx-32", "md:rounded-md");
+        menu.classList.remove("md:fixed", "md:top-0", "md:left-0", "md:right-0", "md:px-10", "md:shadow-md");
+      }
+    }
+  }
+
+  window.addEventListener("scroll", handleScroll);
+  window.addEventListener("resize", handleScroll);
+
     const btn = document.getElementById('menu-btn');
-    const menu = document.getElementById('mobile-menu');
+    const menus = document.getElementById('mobile-menu');
     btn.addEventListener('click', () => {
-        menu.classList.toggle('hidden');
+        menus.classList.toggle('hidden');
     });
 </script>
     </div>
